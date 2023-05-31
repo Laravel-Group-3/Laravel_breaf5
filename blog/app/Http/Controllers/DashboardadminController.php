@@ -4,14 +4,14 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class DashboardadmainController extends Controller
+class DashboardadminController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        return view('Admain.index');
+        return view('Admin.layout.index');
     }
 
     /**

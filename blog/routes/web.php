@@ -1,6 +1,6 @@
 <?php
 
-use App\Http\Controllers\DashboardadmainController;
+use App\Http\Controllers\DashboardadminController;
 use Illuminate\Support\Facades\Route;
 use SebastianBergmann\CodeCoverage\Report\Html\Dashboard;
 
@@ -18,4 +18,4 @@ use SebastianBergmann\CodeCoverage\Report\Html\Dashboard;
 Route::get('/', function () {
     return view('welcome');
 });
-Route::resource('/dashboard', DashboardadmainController::class);
+Route::resource('/dashboard', DashboardadminController::class);

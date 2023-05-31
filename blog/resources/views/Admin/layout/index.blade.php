@@ -1,4 +1,4 @@
-@extends('Admain.layout')
+@extends('Admin.layout.master')
 @section('content')
     <!--*******************
         Preloader start
