@@ -30,7 +30,7 @@ Route::put('/Renterdashboard/{id}', [RenterController::class, 'update'])->name('
 Route::get('/Renterdashboard', [RenterController::class, 'index'])->name('Renterdashboard.index');
 Route::get('/Renterdashboard/{id}', [RenterController::class, 'show'])->name('Renterdashboard.show');
 
-Route::get('/search', [DashboardadminController::class, 'search'])->name('search');
+// Route::get('/search', [DashboardadminController::class, 'search'])->name('search');
 
 
 Route::get('/userdashboard', [UserDashboardController::class, 'index'])->name('userdashboard.index');
@@ -44,3 +44,5 @@ Route::get('/lessordashboard/{id}', [LessorDashboardController::class, 'show'])-
 Route::get('/lessordashboard/{id}/edit', [LessorDashboardController::class, 'edit'])->name('lessordashboard.edit');
 Route::put('/lessordashboard/{id}', [LessorDashboardController::class, 'update'])->name('lessordashboard.update');
 Route::delete('/lessordashboard/{id}', [LessorDashboardController::class, 'destroy'])->name('lessordashboard.destroy');
+
+Route::get('/app-profile', [DashboardadminController::class, 'showProfile'])->name('app-profile');

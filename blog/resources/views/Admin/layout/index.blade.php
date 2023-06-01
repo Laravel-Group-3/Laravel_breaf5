@@ -56,13 +56,13 @@
                         </div>
                         <input type="search" class="form-control" placeholder="Search Dashboard" aria-label="Search Dashboard">
                         <div class="drop-down animated flipInX d-md-none">
-                            <form action="{{ route('search') }}" method="GET">
+                            {{-- <form action="{{ route('search') }}" method="GET">
                                 <input type="search" class="form-control" name="query" placeholder="Search Dashboard" aria-label="Search Dashboard">
                                 <button type="submit" class="btn btn-primary">Search</button>
-                            </form>
+                            </form> --}}
 
                         </div>
-                        
+
                     </div>
                 </div>
                 <div class="header-right">
@@ -201,7 +201,7 @@
                                 <div class="dropdown-content-body">
                                     <ul>
                                         <li>
-                                            <a href="app-profile.html"><i class="icon-user"></i> <span>Profile</span></a>
+                                            <a href="{{ route('app-profile') }}"><i class="icon-user"></i> <span>Profile</span></a>
                                         </li>
                                         <li>
                                             <a href="javascript:void()">

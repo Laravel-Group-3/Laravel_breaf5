@@ -23,6 +23,13 @@ class DashboardadminController extends Controller
         return view('Admin.layout.index',compact('farmCount','rentedFarmsCount'));
     }
 
+    public function showProfile()
+    {
+        // Your code logic here to fetch the user profile data
+
+        return view('Admin.layout.app-profile'); // Assuming you have a "profile.blade.php" view file
+    }
+
     public function getRentedFarmCount()
 {
     $rentedFarmsCount = Farm::where('status', true)->count();
@@ -92,12 +99,12 @@ class DashboardadminController extends Controller
     {
         //
     }
-    public function search(Request $request)
-{
-    $query = $request->input('query');
-    $results = User::where('name', 'like', '%'.$query.'%')->get(); // Replace with your search logic
+//     public function search(Request $request)
+// {
+//     $query = $request->input('query');
+//     $results = User::where('name', 'like', '%'.$query.'%')->get(); // Replace with your search logic
 
-    // Pass the results to the view or perform any other actions
-    return view('your-search-results-view', compact('results'));
-}
+//     // Pass the results to the view or perform any other actions
+//     return view('your-search-results-view', compact('results'));
+// }
 }
