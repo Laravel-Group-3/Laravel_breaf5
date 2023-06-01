@@ -498,6 +498,7 @@
                                                 <th scope="col">description</th>
                                                 <th scope="col">address</th>
                                                 <th scope="col">price</th>
+                                                <th scope="col">Lessor</th>
                                                 <th scope="col">Action</th>
                                             </tr>
                                         </thead>
@@ -511,6 +512,8 @@
                                                 <td>{{$farm->description}}</td>
                                                 <td>{{$farm->address}}</td>
                                                 <td>{{$farm->price}}</td>
+                                                <td>{{ $farm->user->fname }}</td>
+
                                                 <td><span><a href="{{ route('Renter.edit', $farm->id) }}" data-toggle="tooltip" data-placement="top"
                                                             title="Edit"><i class="fa fa-pencil color-muted m-r-5"></i>
                                                         </a><a href="#" data-toggle="tooltip" data-placement="top"

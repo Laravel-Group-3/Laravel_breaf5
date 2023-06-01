@@ -56,10 +56,13 @@
                         </div>
                         <input type="search" class="form-control" placeholder="Search Dashboard" aria-label="Search Dashboard">
                         <div class="drop-down animated flipInX d-md-none">
-                            <form action="#">
-                                <input type="text" class="form-control" placeholder="Search">
+                            <form action="{{ route('search') }}" method="GET">
+                                <input type="search" class="form-control" name="query" placeholder="Search Dashboard" aria-label="Search Dashboard">
+                                <button type="submit" class="btn btn-primary">Search</button>
                             </form>
+
                         </div>
+                        
                     </div>
                 </div>
                 <div class="header-right">
@@ -232,12 +235,15 @@
                     <li class="nav-label">Dashboard</li>
                     <li>
                         <a class="has-arrow" href="javascript:void()" aria-expanded="false">
-                            <i class="icon-speedometer menu-icon"></i><span class="nav-text">Dashboard</span>
+                            <i class="icon-speedometer menu-icon"></i><span class="nav-text">  Dashboard</span>
                         </a>
                         <ul aria-expanded="false">
-                            <li><a href="./index.html">Home 1</a></li>
-                            <!-- <li><a href="./index-2.html">Home 2</a></li> -->
+                            <li><a href="{{route('userdashboard.index')}}">User Dashboard</a></li>
+                            <li><a href="{{route('lessordashboard.index')}}">Lessor Dashboard</a></li>
+                            <li><a href="{{route('Renterdashboard.index')}}">Renter Dashboard</a></li>
+
                         </ul>
+
                     </li>
                     <li class="mega-menu mega-menu-sm">
                         <a class="has-arrow" href="javascript:void()" aria-expanded="false">
@@ -391,9 +397,9 @@
                     <div class="col-lg-3 col-sm-6">
                         <div class="card gradient-1">
                             <div class="card-body">
-                                <h3 class="card-title text-white">Products Sold</h3>
+                                <h3 class="card-title text-white"> Farm Number</h3>
                                 <div class="d-inline-block">
-                                    <h2 class="text-white">4565</h2>
+                                    <h2 class="text-white">{{ $farmCount }}</h2>
                                     <p class="text-white mb-0">Jan - March 2019</p>
                                 </div>
                                 <span class="float-right display-5 opacity-5"><i class="fa fa-shopping-cart"></i></span>
@@ -403,9 +409,9 @@
                     <div class="col-lg-3 col-sm-6">
                         <div class="card gradient-2">
                             <div class="card-body">
-                                <h3 class="card-title text-white">Net Profit</h3>
+                                <h3 class="card-title text-white">Rent</h3>
                                 <div class="d-inline-block">
-                                    <h2 class="text-white">$ 8541</h2>
+                                    <h2 class="text-white"> {{ $rentedFarmsCount }}</h2>
                                     <p class="text-white mb-0">Jan - March 2019</p>
                                 </div>
                                 <span class="float-right display-5 opacity-5"><i class="fa fa-money"></i></span>
