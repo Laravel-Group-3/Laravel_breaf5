@@ -1,10 +1,9 @@
 <?php
 
 use App\Http\Controllers\DashboardadminController;
+use App\Http\Controllers\FarmController;
 use App\Http\Controllers\UserDashboardController;
-
 use Illuminate\Support\Facades\Route;
-use SebastianBergmann\CodeCoverage\Report\Html\Dashboard;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,6 +19,11 @@ use SebastianBergmann\CodeCoverage\Report\Html\Dashboard;
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('/lessor', function () {
+    return view('lessor.index');
+});
+Route::resource('/farm',FarmController::class);
+
 Route::resource('/dashboard', DashboardadminController::class);
 
 Route::get('/userdashboard', [UserDashboardController::class, 'index'])->name('userdashboard.index');
