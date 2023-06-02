@@ -1,7 +1,9 @@
 <?php
 
 use App\Http\Controllers\DashboardadminController;
+use App\Http\Controllers\RenterController;
 use App\Http\Controllers\UserDashboardController;
+
 
 use Illuminate\Support\Facades\Route;
 use SebastianBergmann\CodeCoverage\Report\Html\Dashboard;
@@ -21,6 +23,9 @@ Route::get('/', function () {
     return view('welcome');
 });
 Route::resource('/dashboard', DashboardadminController::class);
+Route::resource('/Renter', RenterController::class);
+Route::get('/Renterdashboard/{id}/edit', [RenterController::class, 'edit'])->name('Renterdashboard.edit');
+Route::put('/Renterdashboard/{id}', [RenterController::class, 'update'])->name('Renterdashboard.update');
 
 Route::get('/userdashboard', [UserDashboardController::class, 'index'])->name('userdashboard.index');
 Route::get('/userdashboard/{id}', [UserDashboardController::class, 'show'])->name('userdashboard.show');
