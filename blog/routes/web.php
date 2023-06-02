@@ -32,3 +32,8 @@ Route::get('/userdashboard/{id}', [UserDashboardController::class, 'show'])->nam
 Route::get('/userdashboard/{id}/edit', [UserDashboardController::class, 'edit'])->name('userdashboard.edit');
 Route::put('/userdashboard/{id}', [UserDashboardController::class, 'update'])->name('userdashboard.update');
 Route::delete('/userdashboard/{id}', [UserDashboardController::class, 'destroy'])->name('userdashboard.destroy');
+
+
+//for home page
+Route::get('/home', 'HomeController@index')->name('home');
+
