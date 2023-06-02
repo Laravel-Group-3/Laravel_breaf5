@@ -30,26 +30,39 @@
                     <div class="content-header-wrapper">
                         <h2 class="title">My Drive</h2>
                         <div class="actions">
-                            <a href="{{ route('farm.create') }}" class="btn btn-success"><i class="fa fa-plus"></i> Upload New Item</a>
+                            <a href="{{ route('farms.create') }}" class="btn btn-success"><i class="fa fa-plus"></i> Upload New Item</a>
                         </div>
                     </div>
                     <div class="drive-wrapper drive-grid-view">
                         <div class="grid-items-wrapper">
-                            <div class="drive-item module text-center">
-                                <div class="drive-item-inner module-inner">
-                                    <div class="drive-item-title"><a href="#">farm name</a></div>
+                            @foreach ($farms as $farm)
+                                <div class="drive-item module text-center">
+                                    <div class="drive-item-inner module-inner">
+                                        <div class="drive-item-title">
+                                            <a href="{{ route('farms.show', $farm) }}">{{ $farm->title }}</a>
+                                        </div>
                                         <div class="drive-item-thumb">
-                                            <img src="" alt="">
+                                            <img src="{{ $farm->getFirstImageUrl() }}" alt="">
                                         </div>
                                     </div>
                                     <div class="drive-item-footer module-footer">
-                                    <ul class="utilities list-inline">
-                                        <li><a href="#" data-toggle="tooltip" data-placement="top" title data-original-title="edit"><i class="fa fa-edit"></i></a></li>
-                                        <li><a href="#" data-toggle="tooltip" data-placement="top" title data-original-title="veiw"><i class="fa fa-eye"></i></a></li>
-                                        <li><a href="#" data-toggle="tooltip" data-placement="top" title data-original-title="Delete"><i class="fa fa-trash"></i></a></li>
-                                    </ul>
+                                        <ul class="utilities list-inline">
+                                            <li><a href="{{ route('farms.edit', $farm) }}" data-toggle="tooltip" data-placement="top"
+                                                    title data-original-title="edit"><i class="fa fa-edit"></i></a></li>
+                                            <li><a href="{{ route('farms.show', $farm) }}" data-toggle="tooltip" data-placement="top"
+                                                    title data-original-title="view"><i class="fa fa-eye"></i></a></li>
+                                            <li>
+                                                <form action="{{ route('farms.destroy', $farm) }}" method="POST" style="display:inline">
+                                                    @csrf
+                                                    @method('DELETE')
+                                                    <button type="submit" class="btn btn-link" data-toggle="tooltip" data-placement="top"
+                                                        title data-original-title="delete"><i class="fa fa-trash"></i></button>
+                                                </form>
+                                            </li>
+                                        </ul>
+                                    </div>
                                 </div>
-                            </div>
+                            @endforeach
                         </div>
                     </div>
                     <div class="drive-wrapper drive-list-view">

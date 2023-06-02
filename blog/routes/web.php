@@ -2,6 +2,8 @@
 
 use App\Http\Controllers\DashboardadminController;
 use App\Http\Controllers\UserDashboardController;
+use App\Http\Controllers\RenterController;
+use App\Http\Controllers\FarmController;
 
 use Illuminate\Support\Facades\Route;
 
@@ -19,10 +21,10 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
-Route::get('/lessor', function () {
-    return view('lessor.index');
-});
-Route::resource('/farm',FarmController::class);
+// Route::get('/lessor', function () {
+//     return view('lessor.index');
+// });
+Route::resource('farms', FarmController::class);
 
 Route::resource('/dashboard', DashboardadminController::class);
 Route::resource('/Renter', RenterController::class);
