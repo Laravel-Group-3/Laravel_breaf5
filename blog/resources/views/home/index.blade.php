@@ -262,7 +262,7 @@
                                         </tr>
                                     </tbody>
                                 </table>
-                                <a href="#" class="primary-btn">More Details</a>
+                                <a href="{{ route('post.view', ['id' => $farm->id]) }}" class="primary-btn">More Details</a>
                             </div>
                         </div>
                     </div>

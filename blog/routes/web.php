@@ -9,6 +9,19 @@ use App\Http\Controllers\AppointmentDashboardController;
 use App\Http\Controllers\LessorDashboardController;
 use App\Http\Controllers\RenterController;
 use App\Http\Controllers\AppProfileAdminController;
+use App\Http\Controllers\Auth\RegisterController;
+use App\Http\Controllers\Auth\LoginController;
+use App\Http\Controllers\Auth\LogoutController;
+
+
+
+use App\Http\Controllers\PostController;
+use App\Http\Controllers\FarmDetailController;
+
+use App\Http\Controllers\FarmController;
+use App\Http\Controllers\ProfileController;
+
+use App\Http\Controllers\UserHomeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -82,5 +95,36 @@ Route::get('/search', [HomeController::class, 'search'])->name('home-page');
 // Route::get('filter', [ProductController::class, 'filterProducts'])->name('filter');
 
 
+Route::get('/register', [RegisterController::class, 'showRegistrationForm'])->name('register');
+Route::post('/register', [RegisterController::class, 'register']);
+Route::get('/login', [LoginController::class, 'showLoginForm'])->name('login');
+Route::post('/login', [LoginController::class, 'login']);
+Route::post('/logout', [LogoutController::class, 'logout'])->name('logout');
+Route::get('/register-lessor', [RegisterlessorController::class, 'showRegistrationlessorForm'])->name('register-lessor');
+Route::post('/register-lessor', [RegisterlessorController::class, 'register']);
 
 
+
+// Route::middleware(['auth', 'admin'])->group(function () {
+//     Route::resource('/dashboard', DashboardController::class);
+// });
+
+
+
+// farm vie
+Route::get('/post-view/{id}',[FarmDetailController::class, 'view'])->name('post.view');
+
+#Manage Review & rating
+Route::any('/review-store',[PostController::class, 'reviewstore'])->name('review.store');
+
+
+
+Route::get('/appointment', [FarmDetailController::class, 'index'])->name('appointment.index');
+Route::any('/submit-appointment', [FarmDetailController::class, 'submitAppointment'])->name('submit.appointment');
+
+Route::resource('farms', FarmController::class);
+Route::get('/profile/index', [ProfileController::class, 'index'])->name('profile.index');
+Route::get('/profile/edit', [ProfileController::class, 'edit'])->name('profile.edit');
+Route::put('/profile/update', [ProfileController::class, 'update'])->name('profile.update');
+Route::get('/user-home', [UserHomeController::class, 'index'])->name('user.home');
+Route::put('/user/{id}', [UserHomeController::class, 'update'])->name('user.update');

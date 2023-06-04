@@ -47,6 +47,7 @@ class AppProfileAdminController extends Controller
             $user->user_img = $filename;
         }
         $user->update();
+        
 
         return redirect()->route('app-profile', $user->id)
             ->with('success', 'User updated successfully');

@@ -10,7 +10,21 @@ class Farm extends Model
     use HasFactory;
 
     protected $table = 'farms';
-
+    protected $fillable = [
+        'title',
+        'description',
+        'address',
+        'price',
+        'num_guests',
+        'num_bedrooms',
+        'num_beds',
+        'user_id',
+        'status',
+        // Add other fields here
+    ];
+    protected $attributes = [
+        'user_id' => 1, // Set the default value for user_id should change when login be ready
+    ];
     // Define the many-to-one relationship with the User model
     public function user()
     {

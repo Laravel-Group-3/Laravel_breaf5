@@ -19,12 +19,17 @@ class Comment extends Model
     // Define the many-to-one relationship with the User model
     public function user()
     {
-        return $this->belongsTo(User::class,'user_id');
+        return $this->belongsTo(User::class);
     }
 
     // Define the many-to-many relationship with the Farm model
     public function farms()
     {
         return $this->belongsToMany(Farm::class);
+    }
+
+    public function ReviewData()
+    {
+    return $this->hasMany('App\Models\ReviewRating','post_id');
     }
 }

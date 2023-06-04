@@ -27,6 +27,15 @@ class RenterController extends Controller
 
         return view('RenterDashboard.renter', compact('Farm'));
     }
+    public function destroy($id)
+{
+    // Find the farm by ID and delete it
+    $farm = Farm::findOrFail($id);
+    $farm->delete();
+
+    // Redirect or return a response as needed
+    return redirect()->route('RenterDashboard.index')->with('success', 'Farm deleted successfully');
+}
     public function edit($id)
     {
         $farm = Farm::find($id);

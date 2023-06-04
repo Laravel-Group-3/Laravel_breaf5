@@ -14,20 +14,146 @@
     <link href="https://fonts.googleapis.com/css?family=Cabin:400,500,600,700&display=swap" rel="stylesheet">
 
     <!-- Css Styles -->
-    <link rel="stylesheet" href="{{ url('home/css/bootstrap.min.css')}}" type="text/css">
-    <link rel="stylesheet" href="{{ url('home/css/font-awesome.min.css')}}" type="text/css">
-    <link rel="stylesheet" href="{{ url('home/css/elegant-icons.css')}}" type="text/css">
-    <link rel="stylesheet" href="{{ url('home/css/flaticon.css" type="text/css')}}">
-    <link rel="stylesheet" href="{{ url('home/css/owl.carousel.min.css')}}" type="text/css">
-    <link rel="stylesheet" href="{{ url('home/css/nice-select.css')}}" type="text/css">
-    <link rel="stylesheet" href="{{ url('home/css/jquery-ui.min.css')}}" type="text/css">
-    <link rel="stylesheet" href="{{ url('home/css/magnific-popup.css')}}" type="text/css">
-    <link rel="stylesheet" href="{{ url('home/css/slicknav.min.css')}}" type="text/css">
-    <link rel="stylesheet" href="{{ url('home/css/style.css')}}" type="text/css">
+    <link rel="stylesheet" href="{{ url('home/css/bootstrap.min.css') }}" type="text/css">
+    <link rel="stylesheet" href="{{ url('home/css/font-awesome.min.css') }}" type="text/css">
+    <link rel="stylesheet" href="{{ url('home/css/elegant-icons.css') }}" type="text/css">
+    <link rel="stylesheet" href="{{ url('home/css/flaticon.css" type="text/css') }}">
+    <link rel="stylesheet" href="{{ url('home/css/owl.carousel.min.css') }}" type="text/css">
+    <link rel="stylesheet" href="{{ url('home/css/nice-select.css') }}" type="text/css">
+    <link rel="stylesheet" href="{{ url('home/css/jquery-ui.min.css') }}" type="text/css">
+    <link rel="stylesheet" href="{{ url('home/css/magnific-popup.css') }}" type="text/css">
+    <link rel="stylesheet" href="{{ url('home/css/slicknav.min.css') }}" type="text/css">
+    <link rel="stylesheet" href="{{ url('home/css/style.css') }}" type="text/css">
+
+    {{-- review style --}}
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        /* Add a gray background color with some padding */
+        body {
+            font-family: Arial;
+            padding: 20px;
+            background: #f1f1f1;
+        }
+
+        /* Header/Blog Title */
+        .header {
+            padding: 30px;
+            font-size: 40px;
+            text-align: center;
+            background: white;
+        }
+
+        /* Create two unequal columns that floats next to each other */
+        /* Left column */
+        .leftcolumn {
+            float: left;
+            width: 75%;
+        }
+
+        /* Right column */
+        .rightcolumn {
+            float: left;
+            width: 25%;
+            padding-left: 20px;
+        }
+
+        /* Fake image */
+        .fakeimg {
+            background-color: #aaa;
+            width: 100%;
+            padding: 20px;
+        }
+
+        /* Add a card effect for articles */
+        .card {
+            background-color: white;
+            padding: 20px;
+            margin-top: 20px;
+        }
+
+        /* Clear floats after the columns */
+        .row:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        .avatar {
+            vertical-align: middle;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+        }
+
+        .rate {
+            float: left;
+            height: 46px;
+            padding: 0 10px;
+        }
+
+        .rate:not(:checked)>input {
+            position: absolute;
+            display: none;
+        }
+
+        .rate:not(:checked)>label {
+            float: right;
+            width: 1em;
+            overflow: hidden;
+            white-space: nowrap;
+            cursor: pointer;
+            font-size: 30px;
+            color: #ccc;
+        }
+
+        .rate:not(:checked)>label:before {
+            content: '★ ';
+        }
+
+        .rate>input:checked~label {
+            color: #ffc700;
+        }
+
+        .rate:not(:checked)>label:hover,
+        .rate:not(:checked)>label:hover~label {
+            color: #deb217;
+        }
+
+        .rate>input:checked+label:hover,
+        .rate>input:checked+label:hover~label,
+        .rate>input:checked~label:hover,
+        .rate>input:checked~label:hover~label,
+        .rate>label:hover~input:checked~label {
+            color: #c59b08;
+        }
+
+        .rating-container .form-control:hover,
+        .rating-container .form-control:focus {
+            background: #fff;
+            border: 1px solid #ced4da;
+        }
+
+        .rating-container textarea:focus,
+        .rating-container input:focus {
+            color: #000;
+        }
+    </style>
 </head>
 
 <body>
-  @yield('section')
+    @yield('section')
     <!-- Footer Section Begin -->
     <footer class="footer-section">
         <div class="container">
@@ -85,9 +211,18 @@
                         </ul>
                     </div>
                     <div class="col-lg-5">
-                        <div class="co-text"><p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-  Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
-  <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p></div>
+                        <div class="co-text">
+                            <p>
+                                <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                                Copyright &copy;
+                                <script>
+                                    document.write(new Date().getFullYear());
+                                </script> All rights reserved | This template is made with <i
+                                    class="fa fa-heart" aria-hidden="true"></i> by <a href="https://colorlib.com"
+                                    target="_blank">Colorlib</a>
+                                <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -106,7 +241,7 @@
     </div>
     <!-- Search model end -->
 
-@yield('script')
+    @yield('script')
 </body>
 
 </html>

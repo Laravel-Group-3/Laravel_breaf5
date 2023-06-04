@@ -8,7 +8,10 @@ use Illuminate\Database\Eloquent\Model;
 class Appointment extends Model
 {
     use HasFactory;
-
+    public function farm()
+    {
+        return $this->belongsTo(Farm::class, 'farm_id');
+    }
     // Define the many-to-many relationship with the Farm model
     public function farms()
     {
@@ -18,7 +21,7 @@ class Appointment extends Model
     // Define the many-to-many relationship with the User model
     public function users()
     {
-        return $this->belongsToMany(User::class);
+        return $this->hasMany(User::class);
     }
 
     // Define the one-to-one relationship with the Payment model
@@ -26,4 +29,10 @@ class Appointment extends Model
     {
         return $this->hasOne(Payment::class);
     }
+    protected $fillable = [
+        'user_id',
+        'farm_id',
+        'check_in',
+        'check_out',
+    ];
 }
