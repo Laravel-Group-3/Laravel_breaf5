@@ -18,7 +18,33 @@ class UserDashboardController extends Controller
         $user = User::find($id);
         return view('Admin.userdashboard.show', compact('user'));
     }
+    // public function store(Request $request)
+    // {
+    //     $request->validate([
+    //         'fname' => 'required',
+    //         'lnmae' => 'required',
+    //         'email' => 'required',
+    //         'phone' => 'required',
+    //         'img' => 'image|mimes:jpeg,png,jpg,gif|max:2048',
+    //     ]);
 
+    //     $office = new User;
+    //     $office->fname = $request->fname;
+    //     $office->lname = $request->lname;
+    //     $office->email = $request->email;
+    //     $office->phone = $request->phone;
+
+    //     if ($request->hasFile('image')) {
+    //         $image = $request->file('image');
+    //         $imageName = time().'.'.$image->getClientOriginalExtension();
+    //         $image->move('image', $imageName);
+    //         $office->image = $imageName;
+    //     }
+
+    //     $office->save();
+
+    //     return redirect()->route('office.index')->with('success', 'Office created successfully.');
+    // }
     public function edit($id)
     {
         $user = User::find($id);

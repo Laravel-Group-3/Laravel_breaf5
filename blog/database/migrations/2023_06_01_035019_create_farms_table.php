@@ -23,6 +23,8 @@ return new class extends Migration
             $table->integer('num_bedrooms');
             $table->integer('num_beds');
             $table->unsignedBigInteger('user_id');
+            $table->boolean('status')->default(false);
+
             $table->foreign('user_id')->references('id')->on('users');
             $table->timestamps();
         });

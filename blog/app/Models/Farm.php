@@ -9,10 +9,12 @@ class Farm extends Model
 {
     use HasFactory;
 
+    protected $table = 'farms';
+
     // Define the many-to-one relationship with the User model
     public function user()
     {
-        return $this->belongsTo(User::class);
+        return $this->belongsTo(User::class, 'user_id');
     }
 
     // Define the one-to-many relationship with the Images model
