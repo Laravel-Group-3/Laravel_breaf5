@@ -10,11 +10,12 @@ class HomeController extends Controller
 {
     public function index()
     {
-        $farms = Farm::all(); // Retrieve all farms from the table
-        $images = Image::all();
-    
-        return view('home.index', ['farms' => $farms]);
-        return view('home.index', ['images' => $images]);
+        $farms = Farm::with('images')->get();
+
+        // return view('home.index', ['farms' => $farms]);
+                return view('home.index', compact('farms'));
+
+
     }
 
     public function search() {

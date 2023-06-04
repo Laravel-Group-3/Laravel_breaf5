@@ -11,6 +11,7 @@
             <div class="card-body">
                 <h5 class="card-title">First Name: {{ $user->fname }}</h5>
                 <p class="card-title">Last Name: {{ $user->lname }}</p>
+
                 <p class="card-text">Email: {{ $user->email }}</p>
                 <p class="card-text">phone: {{ $user->phone }}</p>
                 <p class="card-text">Password: {{ $user->password }}</p>

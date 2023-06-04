@@ -9,7 +9,7 @@
             <div class="row">
                 @foreach ($farms as $farm)
                 <div class="col-lg-3 col-md-6">
-                    <div class="hp-room-item set-bg" data-setbg="{{$->}}">
+                    <div class="hp-room-item set-bg" data-setbg="{{url('home/img/room/room-2.jpg ')}}">
                         <div class="hr-text">
                             <h3>{{$farm->title}}</h3>
                             <h2>{{$farm->price }}<span>/Pernight</span></h2>

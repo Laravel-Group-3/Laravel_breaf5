@@ -170,8 +170,8 @@
 </form>
 </div>
 <br>
-
 <!-- filter Section End -->
+
 <section class="hero-section ">
     <div class="container">
         <div class="row">
@@ -234,7 +234,7 @@
                 <div class="row">
                     @foreach ($farms as $farm)
                     <div class="col-lg-3 col-md-6">
-                        <div class="hp-room-item set-bg" data-setbg="{{url('img/room/farm1.jpg')}}">
+                        <div class="hp-room-item" style="background-image: url('{{ url('img/room/' . $farm->images->first()->image) }}')">
                             <div class="hr-text">
                                 <h3>{{$farm->title}}</h3>
                                 <h2>{{$farm->price }}<span>/Pernight</span></h2>

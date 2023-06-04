@@ -35,7 +35,7 @@
 <body>
 
     <!-- Page Preloder -->
-    {{-- <div id="preloder">
+    <div id="preloder">
         <div class="loader"></div>
     </div>
 
@@ -167,7 +167,7 @@
                 </div>
             </div>
         </div>
-    </header> --}}
+    </header>
     <!-- Header End -->
 @yield('content')
     <!-- Footer Section Begin -->
