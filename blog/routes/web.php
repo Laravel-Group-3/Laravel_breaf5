@@ -2,7 +2,13 @@
 
 use App\Http\Controllers\DashboardadminController;
 use App\Http\Controllers\UserDashboardController;
+<<<<<<< HEAD
 use App\Http\Controllers\HomeController;
+=======
+use App\Http\Controllers\RenterController;
+use App\Http\Controllers\FarmController;
+
+>>>>>>> a73342c5cfd531372d8f9b8a8820c436acc91a4b
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -19,11 +25,18 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+<<<<<<< HEAD
 Route::get('/lessor', function () {
     return view('lessor.index');
 });
 
 Route::resource('/farm',FarmController::class);
+=======
+// Route::get('/lessor', function () {
+//     return view('lessor.index');
+// });
+Route::resource('farms', FarmController::class);
+>>>>>>> a73342c5cfd531372d8f9b8a8820c436acc91a4b
 
 Route::resource('/dashboard', DashboardadminController::class);
 Route::resource('/Renter', RenterController::class);

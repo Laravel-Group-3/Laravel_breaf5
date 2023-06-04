@@ -40,4 +40,16 @@ class Farm extends Model
     {
         return $this->belongsToMany(Payment::class);
     }
+<<<<<<< HEAD
+=======
+    public function getFirstImageUrl()
+    {
+        $firstImage = $this->images->first();
+        if ($firstImage) {
+            return asset('storage/' . $firstImage->path);
+        }
+        return null;
+    }
+
+>>>>>>> a73342c5cfd531372d8f9b8a8820c436acc91a4b
 }
