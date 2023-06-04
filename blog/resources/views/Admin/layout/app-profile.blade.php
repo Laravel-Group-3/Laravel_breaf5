@@ -29,7 +29,7 @@
         Preloader end
     ********************-->
 
-    
+
     <!--**********************************
         Main wrapper start
     ***********************************-->
@@ -56,9 +56,9 @@
         <!--**********************************
             Header start
         ***********************************-->
-        <div class="header">    
+        <div class="header">
             <div class="header-content clearfix">
-                
+
                 <div class="nav-control">
                     <div class="hamburger">
                         <span class="toggle-icon"><i class="icon-menu"></i></span>
@@ -85,8 +85,8 @@
                             </a>
                             <div class="drop-down animated fadeIn dropdown-menu">
                                 <div class="dropdown-content-heading d-flex justify-content-between">
-                                    <span class="">3 New Messages</span>  
-                                    
+                                    <span class="">3 New Messages</span>
+
                                 </div>
                                 <div class="dropdown-content-body">
                                     <ul>
@@ -131,7 +131,7 @@
                                             </a>
                                         </li>
                                     </ul>
-                                    
+
                                 </div>
                             </div>
                         </li>
@@ -141,8 +141,8 @@
                             </a>
                             <div class="drop-down animated fadeIn dropdown-menu dropdown-notfication">
                                 <div class="dropdown-content-heading d-flex justify-content-between">
-                                    <span class="">2 New Notifications</span>  
-                                    
+                                    <span class="">2 New Notifications</span>
+
                                 </div>
                                 <div class="dropdown-content-body">
                                     <ul>
@@ -151,7 +151,7 @@
                                                 <span class="mr-3 avatar-icon bg-success-lighten-2"><i class="icon-present"></i></span>
                                                 <div class="notification-content">
                                                     <h6 class="notification-heading">Events near you</h6>
-                                                    <span class="notification-text">Within next 5 days</span> 
+                                                    <span class="notification-text">Within next 5 days</span>
                                                 </div>
                                             </a>
                                         </li>
@@ -160,7 +160,7 @@
                                                 <span class="mr-3 avatar-icon bg-danger-lighten-2"><i class="icon-present"></i></span>
                                                 <div class="notification-content">
                                                     <h6 class="notification-heading">Event Started</h6>
-                                                    <span class="notification-text">One hour ago</span> 
+                                                    <span class="notification-text">One hour ago</span>
                                                 </div>
                                             </a>
                                         </li>
@@ -178,12 +178,12 @@
                                                 <span class="mr-3 avatar-icon bg-danger-lighten-2"><i class="icon-present"></i></span>
                                                 <div class="notification-content">
                                                     <h6 class="notification-heading">Events to Join</h6>
-                                                    <span class="notification-text">After two days</span> 
+                                                    <span class="notification-text">After two days</span>
                                                 </div>
                                             </a>
                                         </li>
                                     </ul>
-                                    
+
                                 </div>
                             </div>
                         </li>
@@ -214,7 +214,7 @@
                                         <li>
                                             <a href="email-inbox.html"><i class="icon-envelope-open"></i> <span>Inbox</span> <div class="badge gradient-3 badge-pill badge-primary">3</div></a>
                                         </li>
-                                        
+
                                         <hr class="my-2">
                                         <li>
                                             <a href="page-lock.html"><i class="icon-lock"></i> <span>Lock Screen</span></a>
@@ -235,7 +235,7 @@
         <!--**********************************
             Sidebar start
         ***********************************-->
-        <div class="nk-sidebar">           
+        <div class="nk-sidebar">
             <div class="nk-nav-scroll">
                 <ul class="metismenu" id="menu">
                     <li class="nav-label">Dashboard</li>
@@ -243,147 +243,9 @@
                         <a class="has-arrow" href="javascript:void()" aria-expanded="false">
                             <i class="icon-speedometer menu-icon"></i><span class="nav-text">Dashboard</span>
                         </a>
-                        <ul aria-expanded="false">
-                            <li><a href="./index.html">Home 1</a></li>
-                            <!-- <li><a href="./index-2.html">Home 2</a></li> -->
+
                         </ul>
-                    </li>
-                    <li class="mega-menu mega-menu-sm">
-                        <a class="has-arrow" href="javascript:void()" aria-expanded="false">
-                            <i class="icon-globe-alt menu-icon"></i><span class="nav-text">Layouts</span>
-                        </a>
-                        <ul aria-expanded="false">
-                            <li><a href="./layout-blank.html">Blank</a></li>
-                            <li><a href="./layout-one-column.html">One Column</a></li>
-                            <li><a href="./layout-two-column.html">Two column</a></li>
-                            <li><a href="./layout-compact-nav.html">Compact Nav</a></li>
-                            <li><a href="./layout-vertical.html">Vertical</a></li>
-                            <li><a href="./layout-horizontal.html">Horizontal</a></li>
-                            <li><a href="./layout-boxed.html">Boxed</a></li>
-                            <li><a href="./layout-wide.html">Wide</a></li>
-                            
-                            
-                            <li><a href="./layout-fixed-header.html">Fixed Header</a></li>
-                            <li><a href="layout-fixed-sidebar.html">Fixed Sidebar</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-label">Apps</li>
-                    <li>
-                        <a class="has-arrow" href="javascript:void()" aria-expanded="false">
-                            <i class="icon-envelope menu-icon"></i> <span class="nav-text">Email</span>
-                        </a>
-                        <ul aria-expanded="false">
-                            <li><a href="./email-inbox.html">Inbox</a></li>
-                            <li><a href="./email-read.html">Read</a></li>
-                            <li><a href="./email-compose.html">Compose</a></li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a class="has-arrow" href="javascript:void()" aria-expanded="false">
-                            <i class="icon-screen-tablet menu-icon"></i><span class="nav-text">Apps</span>
-                        </a>
-                        <ul aria-expanded="false">
-                            <li><a href="./app-profile.html">Profile</a></li>
-                            <li><a href="./app-calender.html">Calender</a></li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a class="has-arrow" href="javascript:void()" aria-expanded="false">
-                            <i class="icon-graph menu-icon"></i> <span class="nav-text">Charts</span>
-                        </a>
-                        <ul aria-expanded="false">
-                            <li><a href="./chart-flot.html">Flot</a></li>
-                            <li><a href="./chart-morris.html">Morris</a></li>
-                            <li><a href="./chart-chartjs.html">Chartjs</a></li>
-                            <li><a href="./chart-chartist.html">Chartist</a></li>
-                            <li><a href="./chart-sparkline.html">Sparkline</a></li>
-                            <li><a href="./chart-peity.html">Peity</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-label">UI Components</li>
-                    <li>
-                        <a class="has-arrow" href="javascript:void()" aria-expanded="false">
-                            <i class="icon-grid menu-icon"></i><span class="nav-text">UI Components</span>
-                        </a>
-                        <ul aria-expanded="false">
-                            <li><a href="./ui-accordion.html">Accordion</a></li>
-                            <li><a href="./ui-alert.html">Alert</a></li>
-                            <li><a href="./ui-badge.html">Badge</a></li>
-                            <li><a href="./ui-button.html">Button</a></li>
-                            <li><a href="./ui-button-group.html">Button Group</a></li>
-                            <li><a href="./ui-cards.html">Cards</a></li>
-                            <li><a href="./ui-carousel.html">Carousel</a></li>
-                            <li><a href="./ui-dropdown.html">Dropdown</a></li>
-                            <li><a href="./ui-list-group.html">List Group</a></li>
-                            <li><a href="./ui-media-object.html">Media Object</a></li>
-                            <li><a href="./ui-modal.html">Modal</a></li>
-                            <li><a href="./ui-pagination.html">Pagination</a></li>
-                            <li><a href="./ui-popover.html">Popover</a></li>
-                            <li><a href="./ui-progressbar.html">Progressbar</a></li>
-                            <li><a href="./ui-tab.html">Tab</a></li>
-                            <li><a href="./ui-typography.html">Typography</a></li>
-                        <!-- </ul>
-                    </li>
-                    <li>
-                        <a class="has-arrow" href="javascript:void()" aria-expanded="false">
-                            <i class="icon-layers menu-icon"></i><span class="nav-text">Components</span>
-                        </a>
-                        <ul aria-expanded="false"> -->
-                            <li><a href="./uc-nestedable.html">Nestedable</a></li>
-                            <li><a href="./uc-noui-slider.html">Noui Slider</a></li>
-                            <li><a href="./uc-sweetalert.html">Sweet Alert</a></li>
-                            <li><a href="./uc-toastr.html">Toastr</a></li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="widgets.html" aria-expanded="false">
-                            <i class="icon-badge menu-icon"></i><span class="nav-text">Widget</span>
-                        </a>
-                    </li>
-                    <li class="nav-label">Forms</li>
-                    <li>
-                        <a class="has-arrow" href="javascript:void()" aria-expanded="false">
-                            <i class="icon-note menu-icon"></i><span class="nav-text">Forms</span>
-                        </a>
-                        <ul aria-expanded="false">
-                            <li><a href="./form-basic.html">Basic Form</a></li>
-                            <li><a href="./form-validation.html">Form Validation</a></li>
-                            <li><a href="./form-step.html">Step Form</a></li>
-                            <li><a href="./form-editor.html">Editor</a></li>
-                            <li><a href="./form-picker.html">Picker</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-label">Table</li>
-                    <li>
-                        <a class="has-arrow" href="javascript:void()" aria-expanded="false">
-                            <i class="icon-menu menu-icon"></i><span class="nav-text">Table</span>
-                        </a>
-                        <ul aria-expanded="false">
-                            <li><a href="./table-basic.html" aria-expanded="false">Basic Table</a></li>
-                            <li><a href="./table-datatable.html" aria-expanded="false">Data Table</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-label">Pages</li>
-                    <li>
-                        <a class="has-arrow" href="javascript:void()" aria-expanded="false">
-                            <i class="icon-notebook menu-icon"></i><span class="nav-text">Pages</span>
-                        </a>
-                        <ul aria-expanded="false">
-                            <li><a href="./page-login.html">Login</a></li>
-                            <li><a href="./page-register.html">Register</a></li>
-                            <li><a href="./page-lock.html">Lock Screen</a></li>
-                            <li><a class="has-arrow" href="javascript:void()" aria-expanded="false">Error</a>
-                                <ul aria-expanded="false">
-                                    <li><a href="./page-error-404.html">Error 404</a></li>
-                                    <li><a href="./page-error-403.html">Error 403</a></li>
-                                    <li><a href="./page-error-400.html">Error 400</a></li>
-                                    <li><a href="./page-error-500.html">Error 500</a></li>
-                                    <li><a href="./page-error-503.html">Error 503</a></li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </li>
-                </ul>
+                    
             </div>
         </div>
         <!--**********************************
@@ -399,7 +261,7 @@
                 <div class="col p-md-0">
                     <ol class="breadcrumb">
                         <li class="breadcrumb-item"><a href="javascript:void(0)">Dashboard</a></li>
-                        <li class="breadcrumb-item active"><a href="javascript:void(0)">Home</a></li>
+                        {{-- <li class="breadcrumb-item active"><a href="{{ route('dashboard') }}">Dashboard</a></li> --}}
                     </ol>
                 </div>
             </div>
@@ -407,17 +269,31 @@
 
             <div class="container-fluid">
                 <div class="row">
-                    <div class="col-lg-4 col-xl-3">
+                    <div class="col-lg-8 col-xl-5">
                         <div class="card">
                             <div class="card-body">
+                                @foreach ($users as $user)
                                 <div class="media align-items-center mb-4">
-                                    <img class="mr-3" src="images/avatar/11.png" width="80" height="80" alt="">
+                                    <img class="mr-3" src="images/avatar/11.png" {{ $user->img }}width="80" height="80" alt="">
                                     <div class="media-body">
-                                        <h3 class="mb-0">Pikamy Cha</h3>
-                                        <p class="text-muted mb-0">Canada</p>
+
+                                        <h3 class="mb-0"><h3>
+                                            {{-- @if ($comment->user) --}}
+                                        {{-- <img src="{{ asset('images/users/' . $comment->user->image) }}" class="rounded-circle" alt=""> --}}
+
+                                        <h5 class="mt-3 mb-1">{{ $user->fname }}</h5>
+
+
+
+                                    @endforeach
+                                    {{-- @else
+                                        <p>No user found.</p>
+                                    @endif --}}
+                                </h3></h3>
+                                        <p class="text-muted mb-0">Jordan</p>
                                     </div>
                                 </div>
-                                
+
                                 <div class="row mb-5">
                                     <div class="col">
                                         <div class="card card-profile text-center">
@@ -439,124 +315,25 @@
                                 </div>
 
                                 <h4>About Me</h4>
-                                <p class="text-muted">Hi, I'm Pikamy, has been the industry standard dummy text ever since the 1500s.</p>
+                                <p class="text-muted">Hi, I'm {{ $user->fname}} {{$user->lname }} , has been the industry standard dummy text ever since the 1500s.</p>
                                 <ul class="card-profile__info">
-                                    <li class="mb-1"><strong class="text-dark mr-4">Mobile</strong> <span>01793931609</span></li>
-                                    <li><strong class="text-dark mr-4">Email</strong> <span>name@domain.com</span></li>
+                                    <li class="mb-1"><strong class="text-dark mr-4">Mobile</strong> <span>{{ $user->phone }}</span></li>
+                                    <li><strong class="text-dark mr-4">Email</strong> <span>{{ $user->email }}</span></li>
                                 </ul>
                             </div>
-                        </div>  
+                            <a href="{{ route('userdashboard.edit', $user->id) }}" class="btn btn-primary">Edit Image</a>
+
+                        </div>
+
                     </div>
-                    <div class="col-lg-8 col-xl-9">
-                        <div class="card">
-                            <div class="card-body">
-                                <form action="#" class="form-profile">
-                                    <div class="form-group">
-                                        <textarea class="form-control" name="textarea" id="textarea" cols="30" rows="2" placeholder="Post a new message"></textarea>
-                                    </div>
-                                    <div class="d-flex align-items-center">
-                                        <ul class="mb-0 form-profile__icons">
-                                            <li class="d-inline-block">
-                                                <button class="btn btn-transparent p-0 mr-3"><i class="fa fa-user"></i></button>
-                                            </li>
-                                            <li class="d-inline-block">
-                                                <button class="btn btn-transparent p-0 mr-3"><i class="fa fa-paper-plane"></i></button>
-                                            </li>
-                                            <li class="d-inline-block">
-                                                <button class="btn btn-transparent p-0 mr-3"><i class="fa fa-camera"></i></button>
-                                            </li>
-                                            <li class="d-inline-block">
-                                                <button class="btn btn-transparent p-0 mr-3"><i class="fa fa-smile"></i></button>
-                                            </li>
-                                        </ul>
-                                        <button class="btn btn-primary px-3 ml-4">Send</button>
-                                    </div>
-                                </form>
-                            </div>
-                        </div>
 
-                        <div class="card">
-                            <div class="card-body">
-                                <div class="media media-reply">
-                                    <img class="mr-3 circle-rounded" src="images/avatar/2.jpg" width="50" height="50" alt="Generic placeholder image">
-                                    <div class="media-body">
-                                        <div class="d-sm-flex justify-content-between mb-2">
-                                            <h5 class="mb-sm-0">Milan Gbah <small class="text-muted ml-3">about 3 days ago</small></h5>
-                                            <div class="media-reply__link">
-                                                <button class="btn btn-transparent p-0 mr-3"><i class="fa fa-thumbs-up"></i></button>
-                                                <button class="btn btn-transparent p-0 mr-3"><i class="fa fa-thumbs-down"></i></button>
-                                                <button class="btn btn-transparent text-dark font-weight-bold p-0 ml-2">Reply</button>
-                                            </div>
-                                        </div>
-                                        
-                                        <p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.</p>
-                                        <ul>
-                                            <li class="d-inline-block"><img class="rounded" width="60" height="60" src="images/blog/2.jpg" alt=""></li>
-                                            <li class="d-inline-block"><img class="rounded" width="60" height="60" src="images/blog/3.jpg" alt=""></li>
-                                            <li class="d-inline-block"><img class="rounded" width="60" height="60" src="images/blog/4.jpg" alt=""></li>
-                                            <li class="d-inline-block"><img class="rounded" width="60" height="60" src="images/blog/1.jpg" alt=""></li>
-                                        </ul>
-
-                                        <div class="media mt-3">
-                                        <img class="mr-3 circle-rounded circle-rounded" src="images/avatar/4.jpg" width="50" height="50" alt="Generic placeholder image">
-                                        <div class="media-body">
-                                            <div class="d-sm-flex justify-content-between mb-2">
-                                                <h5 class="mb-sm-0">Milan Gbah <small class="text-muted ml-3">about 3 days ago</small></h5>
-                                                <div class="media-reply__link">
-                                                    <button class="btn btn-transparent p-0 mr-3"><i class="fa fa-thumbs-up"></i></button>
-                                                    <button class="btn btn-transparent p-0 mr-3"><i class="fa fa-thumbs-down"></i></button>
-                                                    <button class="btn btn-transparent p-0 ml-3 font-weight-bold">Reply</button>
-                                                </div>
-                                            </div>
-                                            <p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            <div class="media media-reply">
-                                <img class="mr-3 circle-rounded" src="images/avatar/2.jpg" width="50" height="50" alt="Generic placeholder image">
-                                <div class="media-body">
-                                    <div class="d-sm-flex justify-content-between mb-2">
-                                        <h5 class="mb-sm-0">Milan Gbah <small class="text-muted ml-3">about 3 days ago</small></h5>
-                                        <div class="media-reply__link">
-                                            <button class="btn btn-transparent p-0 mr-3"><i class="fa fa-thumbs-up"></i></button>
-                                            <button class="btn btn-transparent p-0 mr-3"><i class="fa fa-thumbs-down"></i></button>
-                                            <button class="btn btn-transparent p-0 ml-3 font-weight-bold">Reply</button>
-                                        </div>
-                                    </div>
-                                    
-                                    <p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.</p>
-                                </div>
-                            </div>
-
-                            <div class="media media-reply">
-                                <img class="mr-3 circle-rounded" src="images/avatar/2.jpg" width="50" height="50" alt="Generic placeholder image">
-                                <div class="media-body">
-                                    <div class="d-sm-flex justify-content-between mb-2">
-                                        <h5 class="mb-sm-0">Milan Gbah <small class="text-muted ml-3">about 3 days ago</small></h5>
-                                        <div class="media-reply__link">
-                                            <button class="btn btn-transparent p-0 mr-3"><i class="fa fa-thumbs-up"></i></button>
-                                            <button class="btn btn-transparent p-0 mr-3"><i class="fa fa-thumbs-down"></i></button>
-                                            <button class="btn btn-transparent p-0 ml-3 font-weight-bold">Reply</button>
-                                        </div>
-                                    </div>
-                                    
-                                    <p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.</p>
-                                </div>
-                            </div>
-                        </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
             <!-- #/ container -->
         </div>
         <!--**********************************
             Content body end
         ***********************************-->
-        
-        
+
+
         <!--**********************************
             Footer start
         ***********************************-->

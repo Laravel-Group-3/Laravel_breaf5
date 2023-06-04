@@ -8,11 +8,13 @@ use Illuminate\Http\Request;
 class LessorDashboardController extends Controller
 {
     public function index(Request $request)
-    {
-        $role = Role::find(3);
-        $users = User::where('role_id', $role->id)->get();
-        return view('Admin.lessordashboard.index', compact('users'));
-    }
+{
+    $role = Role::find(3);
+    $users = User::where('role_id', $role->id)->paginate(9);
+
+    return view('Admin.lessordashboard.index', compact('users'));
+}
+
 
     public function show($id)
     {

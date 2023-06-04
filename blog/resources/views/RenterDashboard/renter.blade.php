@@ -53,15 +53,14 @@
                 <div class="header-left">
                     <div class="input-group icons">
                         <div class="input-group-prepend">
-                            <span class="input-group-text bg-transparent border-0 pr-2 pr-sm-3" id="basic-addon1"><i
-                                    class="mdi mdi-magnify"></i></span>
                         </div>
-                        <input type="search" class="form-control" placeholder="Search Dashboard"
-                            aria-label="Search Dashboard">
-                        <div class="drop-down   d-md-none">
-                            <form action="#">
-                                <input type="text" class="form-control" placeholder="Search">
+                        <form action="{{'/Renter'}}" method="GET">
+                            <input type="search" class="form-control" placeholder="Search Dashboard"
+                                aria-label="Search Dashboard" value="" name="name_useres">
+                                <br><br>
+                                <button type="submit" class="btn btn-primary">search</button>
                             </form>
+                        <div class="drop-down   d-md-none">
                         </div>
                     </div>
                 </div>
@@ -514,7 +513,7 @@
                                                 <td>{{$farm->price}}</td>
                                                 <td>{{ $farm->user->fname }}</td>
 
-                                                <td><span><a href="{{ route('Renter.edit', $farm->id) }}" data-toggle="tooltip" data-placement="top"
+                                                <td><span><a href="{{ route('Renterdashboard.edit', $farm->id) }}" data-toggle="tooltip" data-placement="top"
                                                             title="Edit"><i class="fa fa-pencil color-muted m-r-5"></i>
                                                         </a><a href="#" data-toggle="tooltip" data-placement="top"
                                                             title="Close"><i
@@ -580,4 +579,7 @@
     <!--**********************************
             Scripts
         ***********************************-->
+        {{-- <div class="d-flex justify-content-center">
+            {{ $Farm->links('pagination::bootstrap-4') }}
+        </div> --}}
 @endsection

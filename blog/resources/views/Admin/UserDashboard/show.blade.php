@@ -1,6 +1,7 @@
 @extends('Admin.layout.master')
 
 @section('content')
+
     <div class="container">
         <h1>User Details</h1>
 
@@ -18,7 +19,8 @@
                 {{-- <p class="card-text">Role: {{ $user->role->name }}</p> --}}
                 <p class="card-text">Profile Picture:
                     @if ($user->img)
-                        <img src="{{ $user->img }}" alt="Profile Picture" width="50" height="50">
+                    <img src="{{ asset('images/' . $user->img) }}" width='50'
+                    height='50' class="img img-responsive" />
                     @else
                         N/A
                     @endif

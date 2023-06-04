@@ -5,6 +5,11 @@ use App\Http\Controllers\UserDashboardController;
 use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
 
+use App\Http\Controllers\AppointmentDashboardController;
+use App\Http\Controllers\LessorDashboardController;
+use App\Http\Controllers\RenterController;
+use App\Http\Controllers\AppProfileAdminController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -16,13 +21,13 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+
 Route::get('/', function () {
     return view('welcome');
 });
 Route::get('/lessor', function () {
     return view('lessor.index');
 });
-
 Route::resource('/farm',FarmController::class);
 
 Route::resource('/dashboard', DashboardadminController::class);
@@ -47,7 +52,26 @@ Route::get('/lessordashboard/{id}/edit', [LessorDashboardController::class, 'edi
 Route::put('/lessordashboard/{id}', [LessorDashboardController::class, 'update'])->name('lessordashboard.update');
 Route::delete('/lessordashboard/{id}', [LessorDashboardController::class, 'destroy'])->name('lessordashboard.destroy');
 
-Route::get('/app-profile', [DashboardadminController::class, 'showProfile'])->name('app-profile');
+Route::get('/app-profile', [AppProfileAdminController::class, 'index'])->name('app-profile');
+// Route::get('/edit-image/{id}', [AppProfileAdminController::class, 'update'])->name('edit-image');
+Route::put('/app-profile/{id}', [AppProfileAdminController::class, 'update'])->name('app-profile.update');
+
+// Route::get('/dashboard', [AppProfileAdminController::class, 'dashboard'])->name('dashboard');
+
+
+
+
+    Route::get('/commentdashboard', [CommentDashboardController::class, 'index'])->name('commentdashboard.index');
+    Route::get('/commentdashboard/{id}', [CommentDashboardController::class, 'show'])->name('commentdashboard.show');
+    Route::delete('/commentdashboard/{id}', [CommentDashboardController::class, 'destroy'])->name('commentdashboard.destroy');
+
+    Route::get('/appointment', [AppointmentDashboardController::class, 'index'])->name('appointment.index');
+    Route::get('/appointment/{id}', [AppointmentDashboardController::class, 'show'])->name('appointment.show');
+    //route for pagination
+    Route::get('/users', [UserDashboardController::class, 'index'])->name('userdashboard.index');
+    Route::get('/users', [LessorDashboardController::class, 'index'])->name('lessordashboard.index');
+    Route::get('/farms', [RenterController::class, 'index'])->name('Renterdashboard.index');
+
 
 
 //for home page

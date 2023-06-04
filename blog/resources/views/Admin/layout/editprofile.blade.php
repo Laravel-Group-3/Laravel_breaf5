@@ -1,6 +1,5 @@
 @extends('Admin.layout.master')
 @section('content')
-
     <div class="container">
         <h1>Edit User</h1>
 
@@ -10,7 +9,7 @@
         </div>
     @endif
 
-            <form action="{{ route('userdashboard.update', $user->id) }}" method="POST" enctype="multipart/form-data">
+            <form action="{{ route('app-profile.update', $user->id) }}" method="POST" enctype="multipart/form-data">
                 @csrf
                 @method('PUT')
             <div class="mb-3">

@@ -3,11 +3,12 @@
 namespace App\Http\Controllers;
 use App\Models\User;
 use App\Models\Farm;
-
+use App\Models\Comment;
 use Illuminate\Http\Request;
 
 use Illuminate\Support\Facades\Session;
 
+use Illuminate\Support\Facades\Auth;
 
 
 
@@ -17,18 +18,20 @@ class DashboardadminController extends Controller
      * Display a listing of the resource.
      */
     public function index(Request $request)
-    {
-        $farmCount = Farm::count();$rentedFarmsCount = $this->getRentedFarmCount();
 
-        return view('Admin.layout.index',compact('farmCount','rentedFarmsCount'));
+    {
+        $farms = Farm::all();
+        $farmCount = Farm::count();
+        $rentedFarmsCount = $this->getRentedFarmCount();
+        $comments = Comment::with('user')->get();
+        $users=User::all();
+        $userCount = User::count();
+
+        return view('Admin.layout.index',compact('farmCount','rentedFarmsCount','comments','farms','users','userCount'));
     }
 
-    public function showProfile()
-    {
-        // Your code logic here to fetch the user profile data
 
-        return view('Admin.layout.app-profile'); // Assuming you have a "profile.blade.php" view file
-    }
+
 
     public function getRentedFarmCount()
 {
@@ -108,3 +111,4 @@ class DashboardadminController extends Controller
 //     return view('your-search-results-view', compact('results'));
 // }
 }
+

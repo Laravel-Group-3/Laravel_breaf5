@@ -7,13 +7,30 @@ use \App\Models\Farm;
 
 class RenterController extends Controller
 {
-    public function index()
+    public function index(Request $request)
     {
-        $Farm = Farm::all();
+        // $farms = Farm::paginate(9);
+        // return view('RenterDashboard.renter', compact('farms'));
+        $Farm = $request->input('name_useres');
+
+        $Farms = Farm::when($Farm, function ($query) use ($Farm) {
+            $query->where(function ($query) use ($Farm) {
+                $query->where('title', 'like', '%' . $Farm . '%')
+                    ->orWhere('address', 'like', '%' . $Farm . '%')
+                    ->orWhere('price', 'like', '%' . $Farm . '%');
+            });
+        })->get();
+
+
+
+        $Farm = $Farms; // Assign the filtered farms to $Farm variable
+
         return view('RenterDashboard.renter', compact('Farm'));
     }
     public function edit($id)
     {
-        return view('RenterDashboard.edit');
+        $farm = Farm::find($id);
+
+        return view('RenterDashboard.edit',compact('farm'));
     }
 }

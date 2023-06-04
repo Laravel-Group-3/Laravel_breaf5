@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
+use Illuminate\Support\Facades\File;
 
 use App\Models\User;
 use Illuminate\Http\Request;
@@ -9,9 +10,15 @@ class UserDashboardController extends Controller
 {
     public function index()
     {
-        $users = User::all();
+
+
+
+        // $users = User::all();
+        $users = User::paginate(9); // Change 10 to the desired number of users per page
+
         return view('Admin.userdashboard.index', compact('users'));
     }
+
 
     public function show($id)
     {
@@ -48,6 +55,7 @@ class UserDashboardController extends Controller
     public function edit($id)
     {
         $user = User::find($id);
+
         return view('Admin.userdashboard.edit', compact('user'));
     }
 
@@ -56,11 +64,22 @@ class UserDashboardController extends Controller
         $user = User::find($id);
         $user->fname = $request->input('fname');
         $user->lname = $request->input('lname');
-        $user->img = $request->input('img');
+        // $user->img = $request->input('img');
         $user->email = $request->input('email');
         $user->phone = $request->input('phone');
         $user->password = $request->input('password');
-        $user->save();
+        if($request->hasFile('img')){
+            $destination_path = 'images'.$user->img;
+            if(File::exists($destination_path)){
+                File::delete($destination_path);
+            }
+            $file = $request->file('img');
+            $extension = $file->getClientOriginalExtension();
+            $filename = time().'.'.$extension;
+            $file->move('images', $filename);
+            $user->img = $filename;
+        }
+        $user->update();
 
         return redirect()->route('userdashboard.show', $user->id)
             ->with('success', 'User updated successfully');
@@ -75,3 +94,4 @@ class UserDashboardController extends Controller
             ->with('success', 'User deleted successfully');
     }
 }
+

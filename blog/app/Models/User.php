@@ -8,6 +8,10 @@ use Illuminate\Database\Eloquent\Model;
 class User extends Model
 {
     use HasFactory;
+    protected $table = 'users';
+    protected $fillable = [
+        'fname', 'lname', 'img', 'email', 'phone'
+    ];
 
     // Define the many-to-one relationship with the Role model
     public function role()
